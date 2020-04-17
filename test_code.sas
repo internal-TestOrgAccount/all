@@ -10,4 +10,8 @@
 		where LocalValue in ('10001','10002','10003','10005','10006','90005','90006');
 	quit;
 %mend;
+
+*some comment;
+
+%put GIT;
 	
