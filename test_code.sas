@@ -4,14 +4,10 @@
 
 %macro general();
 	proc sql noprint;
-		create table Map_EntryOrigin as
-		select *, input(LocalValue,20.) as Nlocalvalue
-		from DWH_BDR.MAP_EntryOrigin
-	;quit;
-	proc sql noprint;
 		create table Map_EntryOriааgin_RIA6 as
 		select localvalue, encodercode, input(LocalValue,20.) as Nlocalvalue
 		from DWH_BDR.MAP_EntryOrigin
 		where LocalValue in ('10001','10002','10003','10005','10006','90005','90006');
 	quit;
+%mend;
 	
